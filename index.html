@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STA640</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="matrix.js"></script>
+	<script type="text/javascript" src="anova.js"></script>
+	<script type="text/javascript" src="table.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body onload="onLoad();">
+	<div class="wrapper">
+		<div id="DataTable"></div>
+		<div>
+			<button onclick="addTreatment()">Add Treatment</button>
+			<button onclick="addBlock()">Add Block</button>
+			<button onclick="findANOVA_CRD();">ANOVA Table (CRD)</button>
+			<button onclick="findANOVA_RCBD();">ANOVA Table (RCBD)</button>
+		</div>
+		<div id="Output"></div>
+	</div>
+</body>
+</html>

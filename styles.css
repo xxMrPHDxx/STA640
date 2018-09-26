@@ -1,0 +1,42 @@
+* {
+	padding: 0;
+	font-family: monospace;
+	text-align: center;
+}
+
+.wrapper {
+	width: 100%;
+	height: -webkit-fill-available;
+}
+
+div.wrapper > div {
+	padding: 10px;
+}
+
+table, tr, td { 
+	border-collapse: collapse;
+}
+
+table {
+	width: 100%;
+}
+
+div#Output table {
+	margin: 20px 0;
+}
+
+td { 
+	border: 1px solid black;
+	padding: 5px;
+}
+
+td.DataCell {
+	padding: 0;
+}
+
+input.DataCell {
+	border: 0px solid;
+	background-color: #efefef;
+	width: 100%;
+	height: 25px;
+}
