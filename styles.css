@@ -40,3 +40,8 @@ input.DataCell {
 	width: 100%;
 	height: 25px;
 }
+
+.ButtonGroup > * {
+	margin: 10px auto;
+	padding: 5px;
+}
