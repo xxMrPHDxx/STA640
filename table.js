@@ -1,14 +1,18 @@
 class CRDTable {
 	constructor(rows=0,cols=0){
-		this.treatments = 2;
-		this.blocks = 2;
+		this.treatments = 4;
+		this.blocks = 4;
+		// this.treatments = 2;
+		// this.blocks = 2;
 		this.head = [
 			["Treatment"],
-			["X1","X2"]
+			["X1","X2","X3","X4"]
 		];
 		this.body = [
 			["Block","Y1"],
-			["Y2"]
+			["Y2"],
+			["Y3"],
+			["Y4"]
 		];
 		this.data = [];
 	}
@@ -23,6 +27,15 @@ class CRDTable {
 	appendTo(parent){
 		this.data = [];
 		let elem = document.createElement("table");
+
+
+		let initialData = [
+			["A=85","B=79","C=63","D=97"],
+			["B=91","C=81","D=80","A=93"],
+			["C=59","D=70","A=79","B=80"],
+			["D=75","A=91","B=75","C=68"]
+		]
+
 
 		let thead = document.createElement("thead");
 		for(let row=0;row<this.head.length;row++){
@@ -70,6 +83,11 @@ class CRDTable {
 				td.setAttribute("class","DataCell");
 				let input = document.createElement("input");
 				input.setAttribute("class","DataCell");
+
+				/////////////////////////
+				input.value = initialData[row][col];
+				/////////////////////////
+
 				td.appendChild(input);
 				tr.appendChild(td);
 
@@ -92,5 +110,12 @@ class CRDTable {
 			if(!isNaN(value)) data.cell[row][col] = value;
 		});
 		return typeof data === "undefined" ? new Matrix() : data;
+	}
+	getMatrixRaw(){
+		let data = new Matrix(this.blocks,this.treatments);
+		table.data.forEach(({elem,row,col})=>{
+			data.cell[row][col] = elem.value;
+		});
+		return data;
 	}
 }
