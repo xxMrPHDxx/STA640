@@ -199,23 +199,23 @@ function findANOVA_LSD(){
 
 	let prefs = [
 		{
-			ss: SSTR,
+			ss: roundOff(SSTR,3),
 			df: dfTR,
 			ms: roundOff(SSTR / dfTR,3)
 		},{
-			ss: SSR,
+			ss: roundOff(SSR,3),
 			df: dfR,
 			ms: roundOff(SSR / dfR,3)
 		},{
-			ss: SSC,
+			ss: roundOff(SSC,3),
 			df: dfC,
 			ms: roundOff(SSC / dfC,3)
 		},{
-			ss: SSE,
+			ss: roundOff(SSE,3),
 			df: dfE,
 			ms: roundOff(SSE / dfE,3)
 		},{
-			ss: SST,
+			ss: roundOff(SST,3),
 			df: dfT,
 			ms: null
 		}
